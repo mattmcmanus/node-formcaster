@@ -2,7 +2,7 @@
   "name": "formcaster",
   "description": "HTML Form field generators and helpers",
   "version": "0.1.0",
-  "homepage": "https://github.com/mattmcmanus/formcaster",
+  "homepage": "https://github.com/mattmcmanus/node-formcaster",
   "author": {
     "name": "Matt McManus",
     "email": "mattmcmanus@gmail.com",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mattmcmanus/formcaster.git"
+    "url": "git://github.com/mattmcmanus/node-formcaster.git"
   },
   "bugs": {
-    "url": "https://github.com/mattmcmanus/formcaster/issues"
+    "url": "https://github.com/mattmcmanus/node-formcaster/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/mattmcmanus/formcaster/blob/master/LICENSE-MIT"
+      "url": "https://github.com/mattmcmanus/node-formcaster/blob/master/LICENSE-MIT"
     }
   ],
   "main": "lib/formcaster",
@@ -31,5 +31,8 @@
   "devDependencies": {
     "grunt": "~0.3.17"
   },
-  "keywords": []
+  "keywords": [],
+  "dependencies": {
+    "underscore": "~1.4.3"
+  }
 }
