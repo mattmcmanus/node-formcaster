@@ -20,15 +20,23 @@ var formcaster = require('../lib/formcaster.js');
     test.ifError(value)
 */
 
-exports['awesome'] = {
-  setUp: function(done) {
-    // setup here
-    done();
-  },
-  'no args': function(test) {
+exports['f'] = {
+  'Generate a textarea': function(test) {
     test.expect(1);
-    // tests here
-    test.equal(formcaster.awesome(), 'awesome', 'should be awesome.');
+    var textarea = formcaster.f({tag:'textarea', name:'journal[questions][0][answer]', label: 'How are you doing? What sort of mood have you been in? (Angry, distracted, sad, apathetic, etc)', value: null, attr: {class: 'span8', 'data-save-id': 'journal0'}});
+    var shouldBe = '<div class="control-group journal[questions][0][answer] textarea"><label for="journal[questions][0][answer]">How are you doing? What sort of mood have you been in? (Angry, distracted, sad, apathetic, etc)</label><textarea name="journal[questions][0][answer]" class="span8 input-xlarge" data-save-id="journal0"></textarea></div>';
+    test.equals(textarea, shouldBe, "A textarea is generated");
+
+    test.done();
+  },
+  
+  'Generate a text input': function(test) {
+    test.expect(1);
+    var input = formcaster.fInput({ name:'journal[summary]', label: 'A quick status update', value: null, attr: {class:"span8 title", autofocus: 'autofocus'} } );
+    var shouldBe = '<div class="control-group journal[summary] input"><label for="journal[summary]">A quick status update</label><input name="journal[summary]" class="span8 title input-xlarge" autofocus="autofocus" type="text" value="" /></div>';
+
+    test.equals(input, shouldBe, "A input is generated");
+
     test.done();
   }
 };
