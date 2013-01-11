@@ -1,7 +1,7 @@
 {
   "name": "formcaster",
   "description": "HTML Form field generators and helpers",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/mattmcmanus/node-formcaster",
   "author": {
     "name": "Matt McManus",
